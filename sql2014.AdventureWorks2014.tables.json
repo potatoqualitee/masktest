@@ -85,16 +85,7 @@
                                        },
                                        {
                                            "Name":  "TSQL",
-                                           "ColumnType":  "nvarcharmax",
-                                           "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  -1,
-                                           "MaskingType":  "Random",
-                                           "SubType":  "String"
-                                       },
-                                       {
-                                           "Name":  "XmlEvent",
-                                           "ColumnType":  "xml",
+                                           "ColumnType":  "nvarchar",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -187,16 +178,16 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
+                                           "MinValue":  2,
                                            "MaxValue":  50,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
                                        },
                                        {
                                            "Name":  "GroupName",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -222,7 +213,7 @@
                                            "Name":  "NationalIDNumber",
                                            "ColumnType":  "nvarchar",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
+                                           "MinValue":  3,
                                            "MaxValue":  15,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
@@ -231,7 +222,7 @@
                                            "Name":  "LoginID",
                                            "ColumnType":  "nvarchar",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
+                                           "MinValue":  10,
                                            "MaxValue":  256,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
@@ -249,15 +240,15 @@
                                            "Name":  "BirthDate",
                                            "ColumnType":  "date",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  null,
+                                           "MinValue":  "1/1/1970",
+                                           "MaxValue":  "1/1/1990",
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
                                        },
                                        {
                                            "Name":  "MaritalStatus",
                                            "ColumnType":  "nchar",
-                                           "CharacterString":  null,
+                                           "CharacterString": "SM",
                                            "MinValue":  null,
                                            "MaxValue":  1,
                                            "MaskingType":  "Random",
@@ -266,8 +257,8 @@
                                        {
                                            "Name":  "Gender",
                                            "ColumnType":  "nchar",
-                                           "CharacterString":  null,
-                                           "MinValue":  null,
+                                           "CharacterString":  "MF",
+                                           "MinValue":  1,
                                            "MaxValue":  1,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
@@ -283,19 +274,19 @@
                                        },
                                        {
                                            "Name":  "SalariedFlag",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "VacationHours",
                                            "ColumnType":  "smallint",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  32767,
+                                           "MinValue":  -40,
+                                           "MaxValue":  200,
                                            "MaskingType":  "Random",
                                            "SubType":  "Number"
                                        },
@@ -303,19 +294,19 @@
                                            "Name":  "SickLeaveHours",
                                            "ColumnType":  "smallint",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  32767,
+                                           "MinValue":  0,
+                                           "MaxValue":  120,
                                            "MaskingType":  "Random",
                                            "SubType":  "Number"
                                        },
                                        {
                                            "Name":  "CurrentFlag",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "rowguid",
@@ -345,8 +336,8 @@
                                            "Name":  "StartDate",
                                            "ColumnType":  "date",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
-                                           "MaxValue":  null,
+                                           "MinValue":  null,
+                                           "MaxValue":  "1/1/2018",
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
                                        },
@@ -354,7 +345,7 @@
                                            "Name":  "EndDate",
                                            "ColumnType":  "date",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
+                                           "MinValue":  "1/2/2018",
                                            "MaxValue":  null,
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
@@ -378,7 +369,7 @@
                                            "Name":  "RateChangeDate",
                                            "ColumnType":  "datetime",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  null,
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
@@ -387,8 +378,8 @@
                                            "Name":  "Rate",
                                            "ColumnType":  "money",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  8,
+                                           "MinValue":  6.5,
+                                           "MaxValue":  200,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
                                        },
@@ -396,8 +387,8 @@
                                            "Name":  "PayFrequency",
                                            "ColumnType":  "tinyint",
                                            "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  255,
+                                           "MinValue":  1,
+                                           "MaxValue":  2,
                                            "MaskingType":  "Random",
                                            "SubType":  "Number"
                                        },
@@ -417,15 +408,6 @@
                        "Schema":  "HumanResources",
                        "Columns":  [
                                        {
-                                           "Name":  "Resume",
-                                           "ColumnType":  "xml",
-                                           "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  -1,
-                                           "MaskingType":  "Random",
-                                           "SubType":  "String"
-                                       },
-                                       {
                                            "Name":  "ModifiedDate",
                                            "ColumnType":  "datetime",
                                            "CharacterString":  null,
@@ -442,7 +424,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -544,7 +526,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -649,7 +631,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -672,17 +654,8 @@
                        "Schema":  "Person",
                        "Columns":  [
                                        {
-                                           "Name":  "CountryRegionCode",
-                                           "ColumnType":  "nvarchar",
-                                           "CharacterString":  null,
-                                           "MinValue":  2,
-                                           "MaxValue":  3,
-                                           "MaskingType":  "Random",
-                                           "SubType":  "String"
-                                       },
-                                       {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -790,7 +763,7 @@
                                        },
                                        {
                                            "Name":  "NameStyle",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "namestyle",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  1,
@@ -808,7 +781,7 @@
                                        },
                                        {
                                            "Name":  "FirstName",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -817,7 +790,7 @@
                                        },
                                        {
                                            "Name":  "MiddleName",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -826,7 +799,7 @@
                                        },
                                        {
                                            "Name":  "LastName",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -853,7 +826,7 @@
                                        },
                                        {
                                            "Name":  "AdditionalContactInfo",
-                                           "ColumnType":  "xml",
+                                           "ColumnType":  "additionalcontactinfoschemacollection",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -862,7 +835,7 @@
                                        },
                                        {
                                            "Name":  "Demographics",
-                                           "ColumnType":  "xml",
+                                           "ColumnType":  "individualsurveyschemacollection",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -910,7 +883,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -943,16 +916,16 @@
                                        },
                                        {
                                            "Name":  "IsOnlyStateProvinceFlag",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1038,14 +1011,14 @@
                                            "Name":  "CultureID",
                                            "ColumnType":  "nchar",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  6,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
                                        },
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1132,7 +1105,7 @@
                                        },
                                        {
                                            "Name":  "DocumentSummary",
-                                           "ColumnType":  "nvarcharmax",
+                                           "ColumnType":  "nvarchar",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -1141,7 +1114,7 @@
                                        },
                                        {
                                            "Name":  "Document",
-                                           "ColumnType":  "varbinarymax",
+                                           "ColumnType":  "varbinary",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -1173,15 +1146,6 @@
                        "Schema":  "Production",
                        "Columns":  [
                                        {
-                                           "Name":  "Diagram",
-                                           "ColumnType":  "xml",
-                                           "CharacterString":  null,
-                                           "MinValue":  null,
-                                           "MaxValue":  -1,
-                                           "MaskingType":  "Random",
-                                           "SubType":  "String"
-                                       },
-                                       {
                                            "Name":  "ModifiedDate",
                                            "ColumnType":  "datetime",
                                            "CharacterString":  null,
@@ -1198,7 +1162,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1240,7 +1204,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1258,21 +1222,21 @@
                                        },
                                        {
                                            "Name":  "MakeFlag",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "FinishedGoodsFlag",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "Color",
@@ -1426,7 +1390,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1461,7 +1425,7 @@
                                            "Name":  "StartDate",
                                            "ColumnType":  "datetime",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  null,
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
@@ -1602,7 +1566,7 @@
                                            "Name":  "StartDate",
                                            "ColumnType":  "datetime",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  null,
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
@@ -1642,7 +1606,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1651,7 +1615,7 @@
                                        },
                                        {
                                            "Name":  "CatalogDescription",
-                                           "ColumnType":  "xml",
+                                           "ColumnType":  "productdescriptionschemacollection",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -1660,7 +1624,7 @@
                                        },
                                        {
                                            "Name":  "Instructions",
-                                           "ColumnType":  "xml",
+                                           "ColumnType":  "manuinstructionsschemacollection",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -1723,7 +1687,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "ThumbNailPhoto",
-                                           "ColumnType":  "varbinarymax",
+                                           "ColumnType":  "varbinary",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -1741,7 +1705,7 @@
                                        },
                                        {
                                            "Name":  "LargePhoto",
-                                           "ColumnType":  "varbinarymax",
+                                           "ColumnType":  "varbinary",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
@@ -1774,12 +1738,12 @@
                        "Columns":  [
                                        {
                                            "Name":  "Primary",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "ModifiedDate",
@@ -1798,7 +1762,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "ReviewerName",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1858,7 +1822,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1891,7 +1855,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -1986,7 +1950,7 @@
                                            "Name":  "TransactionID",
                                            "ColumnType":  "int",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  2147483647,
                                            "MaskingType":  "Random",
                                            "SubType":  "Number"
@@ -2073,14 +2037,14 @@
                                            "Name":  "UnitMeasureCode",
                                            "ColumnType":  "nchar",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  3,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
                                        },
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -2166,7 +2130,7 @@
                                            "Name":  "ProductID",
                                            "ColumnType":  "int",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  2147483647,
                                            "MaskingType":  "Random",
                                            "SubType":  "Number"
@@ -2175,7 +2139,7 @@
                                            "Name":  "OperationSequence",
                                            "ColumnType":  "smallint",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  32767,
                                            "MaskingType":  "Random",
                                            "SubType":  "Number"
@@ -2476,7 +2440,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -2527,7 +2491,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "AccountNumber",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "accountnumber",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  15,
@@ -2536,7 +2500,7 @@
                                        },
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -2554,21 +2518,21 @@
                                        },
                                        {
                                            "Name":  "PreferredVendorStatus",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "ActiveFlag",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "PurchasingWebServiceURL",
@@ -2664,14 +2628,14 @@
                                            "Name":  "CurrencyCode",
                                            "ColumnType":  "nchar",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  3,
                                            "MaskingType":  "Random",
                                            "SubType":  "String"
                                        },
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -2881,16 +2845,16 @@
                                        },
                                        {
                                            "Name":  "OnlineOrderFlag",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "flag",
                                            "CharacterString":  null,
                                            "MinValue":  null,
-                                           "MaxValue":  1,
+                                           "MaxValue":  null,
                                            "MaskingType":  "Random",
-                                           "SubType":  "String"
+                                           "SubType":  "Bool"
                                        },
                                        {
                                            "Name":  "PurchaseOrderNumber",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "ordernumber",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  25,
@@ -2899,7 +2863,7 @@
                                        },
                                        {
                                            "Name":  "AccountNumber",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "accountnumber",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  15,
@@ -3063,7 +3027,7 @@
                                            "Name":  "QuotaDate",
                                            "ColumnType":  "datetime",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  null,
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
@@ -3103,7 +3067,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -3112,7 +3076,7 @@
                                        },
                                        {
                                            "Name":  "ReasonType",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -3154,7 +3118,7 @@
                                        },
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -3187,7 +3151,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -3267,7 +3231,7 @@
                                            "Name":  "StartDate",
                                            "ColumnType":  "datetime",
                                            "CharacterString":  null,
-                                           "MinValue":  2,
+                                           "MinValue":  null,
                                            "MaxValue":  null,
                                            "MaskingType":  "Random",
                                            "SubType":  "Date"
@@ -3469,7 +3433,7 @@
                        "Columns":  [
                                        {
                                            "Name":  "Name",
-                                           "ColumnType":  "userdefineddatatype",
+                                           "ColumnType":  "name",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  50,
@@ -3478,7 +3442,7 @@
                                        },
                                        {
                                            "Name":  "Demographics",
-                                           "ColumnType":  "xml",
+                                           "ColumnType":  "storesurveyschemacollection",
                                            "CharacterString":  null,
                                            "MinValue":  null,
                                            "MaxValue":  -1,
